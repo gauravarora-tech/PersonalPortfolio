@@ -1,0 +1,136 @@
+/* INFOS SECTION STRT */
+.info-sec-wrap {
+    display: flex;
+}
+
+.info-sec {
+    margin-top: 10rem;
+}
+
+.heading h3 {
+    font-size: 4rem;
+}
+
+.info-wrap span {
+    font-size: 1.5rem;
+}
+
+.info-sec .personal-info .head-color {
+    color: #afafaf;
+    font-weight: 500;
+    padding: .5rem 0rem;
+}
+
+.info-sec .personal-info .head-color span {
+    color: #fff;
+}
+
+
+.aboutExperiances {
+    border: 2px solid ;
+    padding: 25px 25px;
+    border-image-source: linear-gradient(to right, var(--main-color), #454545);
+    border-image-slice: 1;
+}
+
+.aboutExperiances .num {
+    font-size: 5rem;
+    color: #8a2be2;
+    font-weight: 700;
+}
+
+.content {
+    position: relative;
+    padding-left: 40px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.aboutExperiances .content::before {
+    content: "";
+    position: absolute;
+    border: 1px solid #afafaf;
+    left: 16px;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+}
+
+.more-info {
+    margin-right: 10rem;
+}
+
+
+.experiance-sec {
+    margin-top: 3rem;
+}
+
+.experiance-sec .exp-img {
+    position: relative;
+}
+
+.experiance-sec .exp-img i {
+    /* position: relative; */
+    background-color: #8a2be2;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 35px;
+}
+
+.experiance-sec .exp-img::before {
+    content: "";
+    position: absolute;
+    width: .5px;
+    border-radius: 10px;
+    height: 90px;
+    background-color: #3c3c3c;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 34px;
+    z-index: -1;
+}
+
+.exp-content .year-info {
+    font-weight: 600;
+    background-color: #242323;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 3px 10px;
+    font-size: small;
+}
+
+.exp-content .work-domain span {
+    color: #b5b4b4;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.edu-wrap {
+    padding: 0rem 90px 5rem;
+}
+
+.edu-wrap .work-domain {
+    font-size: 1.3rem;
+}
+
+.common-heading {
+    margin-bottom: 7rem;
+}
+
+.common-heading h2 {
+    font-size: 3rem;
+}
+
+.about-work {
+    font-size: 1.7rem;
+}
+
+#string {
+    width: 100%;
+    height: 200px;
+    /* background-color: rgb(118, 115, 120); */
+    display: flex;
+    justify-content: center;
+}

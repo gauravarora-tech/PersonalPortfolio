@@ -1,0 +1,27 @@
+.title {
+    position: relative;
+}
+
+.bg-title {
+    z-index: -1;
+    font-size: 9rem;
+    letter-spacing: .6rem;
+    font-weight: 900;
+    position: absolute;
+    color: #2a2a2a;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "poppins", sans-serif;
+}
+
+.title .main-head {
+    position: relative;
+    top: 2.5rem;
+    font-size: 5.5rem;
+    font-weight: 900;
+    opacity: .8;
+}
+
+.title .main-head .title-color {
+    color: var(--main-color);
+}

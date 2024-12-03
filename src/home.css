@@ -1,0 +1,119 @@
+.bg-box {
+    width: 118rem;
+    height: 46rem;
+    background-color: var(--main-color);
+    position: absolute;
+    transform: rotate(75deg);
+    left: -55rem;
+    z-index: -1;
+}
+
+.main-sec-wrap {
+    height: 100vh;
+}
+
+.main-sec-wrap .author-img img {
+    width: 480px;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+.main-sec-wrap .author-img {
+    margin-left: -5rem;
+}
+
+.main-sec-wrap .main-sec-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.main-sec-wrap .main-sec-content .description p {
+    padding-right: 24rem;
+    line-height: 2.4rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.main-sec-wrap .main-sec-content h1 span#main-color {
+    color: var(--main-color);
+}
+
+.main-sec-wrap .main-sec-content h1 {
+    font-weight: bold;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+}
+
+#dynamic-content {
+    position: relative;
+}
+
+#dynamic-content::before {
+    content: "";
+    position: relative;
+    animation: words 10s infinite;
+
+}
+
+#dynamic-content::after {
+    content: "";
+    position: absolute;
+    border-right: 3px solid transparent;
+    height: 100%;
+    /* width: 100%; */
+    right: -5px;
+    animation: dash .4s infinite;
+}
+
+
+@keyframes dash {
+    to {
+        border-right: 3px solid var(--main-color);
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "Frontend-Developer";
+    }
+
+    21%,
+    60% {
+        content: "Web Developer";
+    }
+
+    61%,
+    80% {
+        content: "Web Designer";
+    }
+
+    81%,
+    100% {
+        content: "SEO";
+    }
+}
+
+/* ---- RESPONSIVE CODE---- */
+
+@media (min-width:280px) and (max-width:576px){
+    .bg-box{
+        display: none;
+    }
+    .author-img{
+        display: none !important;
+    }
+
+    .main-sec-wrap .main-sec-content h1 {
+        font-size: 3rem;
+    }
+
+    .main-sec-wrap .main-sec-content .description p {
+        font-size: 1.5rem;
+        padding-right: 0;
+    }
+}
+

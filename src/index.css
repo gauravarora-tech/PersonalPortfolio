@@ -1,0 +1,71 @@
+/* font-family = poppins,open-sans */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 64.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  --main-color: #8a2be2;
+  --body-color: #111111;
+  --grey: #252525;
+}
+
+body {
+  background-color: var(--body-color);
+  position: relative;
+  font-family: "Open Sans", system-ui;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADINGS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  /* font-weight: 100; */
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+p,
+label {
+  font-size: 2.5rem;
+}
+
+a{
+  font-size: 1.5rem;
+
+}
+
+.common-container {
+  width: calc(100% - 90px);
+  margin: auto;
+  padding-right: 50px;
+}

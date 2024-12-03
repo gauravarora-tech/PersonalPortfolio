@@ -1,0 +1,56 @@
+.main-sec-btn {
+    width: 100%;
+    /* padding-left: 3.5rem; */
+    margin-top: 2rem;
+}
+
+
+.main-sec-btn a {
+    position: relative;
+    width: 21rem;
+    border-color: #8a2be2;
+    border-radius: 3rem;
+    font-weight: bold;
+    padding: 12px 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-sec-btn a .arrow {
+    /* z-index: -1; */
+    position: absolute;
+    border: 1px solid #8a2be2;
+    border-radius: 50%;
+    background-color: #8a2be2;
+    color: #fff !important;
+    /* padding: 15px; */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    width: 45px;
+
+}
+
+.main-sec-btn a .arrow i {
+    top: 50%;
+    transform: translateY(-65%);
+    position: relative;
+}
+
+a.btn:hover,
+a.btn:active {
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+    /* z-index: 1; */
+
+}
+
+a.btn:hover span i {
+    /* position: relative; */
+    z-index: 1;
+}
+
+.btn-txt {
+    margin-right: 30px;
+    font-size: 1.5rem;
+}
