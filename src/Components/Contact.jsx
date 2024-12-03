@@ -1,12 +1,47 @@
 import Button from "./Button";
 import { SecTitle } from "./SecTitle";
 import "../contact.css"
+import { useState } from "react";
+import styled from "styled-components";
 
 export const Contact = () => {
+
+    const [user, setUser] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        yourMess: "",
+    });
+
+    const handleInputValue = (event) => {
+        const { name, value } = event.target;
+        setUser((prev) => ({ ...prev, [name]: value }));
+    }
+
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        console.log(user);
+    }
+
+    const FormButton = styled.button`
+        font-size: 1.5rem;
+        padding:1rem 2rem;
+        margin-top:2rem;
+        border-radius:1rem;
+        background-color:var(--main-color);
+        border:none;
+        color:white;
+
+        &:hover{
+            opacity:.7;
+        }
+
+    `;
+
     return (
         <>
             <SecTitle bgTitle="CONTACT" title="GET IN" subTitle="TOUCH" />
-
 
             <section className="form-section">
                 <div className="container common-container">
@@ -75,47 +110,57 @@ export const Contact = () => {
 
                             {/* Form Section */}
                             <div className="col-12 col-lg-8 col-md-12">
-                                <div className="form">
+                                <form className="form" onSubmit={handleFormSubmit}>
                                     <div className="inputs">
                                         <div className="fields">
                                             <input
                                                 type="text"
-                                                name="text"
+                                                name="name"
                                                 id="fname"
                                                 className="input-field"
                                                 placeholder="YOUR NAME"
+                                                value={user.name}
+                                                onChange={handleInputValue}
                                             />
                                         </div>
                                         <div className="fields">
                                             <input
                                                 type="email"
-                                                name=""
+                                                name="email"
                                                 id="email"
                                                 className="input-field"
                                                 placeholder="YOUR EMAIL"
+                                                value={user.email}
+                                                onChange={handleInputValue}
                                             />
                                         </div>
                                         <div className="fields">
                                             <input
                                                 type="text"
-                                                name=""
+                                                name="subject"
                                                 id="subj"
                                                 className="input-field"
                                                 placeholder="YOUR SUBJECT"
+                                                value={user.subject}
+                                                onChange={handleInputValue}
                                             />
                                         </div>
                                     </div>
                                     <div className="some-info">
                                         <textarea
-                                            name=""
+                                            name="yourMess"
                                             id="info"
                                             cols="50"
                                             rows="7"
                                             placeholder="YOUR MESSAGE"
+                                            value={user.yourMess}
+                                            onChange={handleInputValue}
                                         ></textarea>
                                     </div>
-                                    <Button btntxt = "SEND MESSAGE"/>
-                                </div>
+                                    {/* <Button btntxt="SEND MESSAGE" /> */}
+                                    {/* <button className="btn btn-dark">SEND MESSAGE</button> */}
+                                    <FormButton className="">SEND MESSAGE</FormButton>
+                                </form>
                             </div>
                         </div>
                     </div>
