@@ -35,7 +35,7 @@ const validateForm = (e) => {
         isValid = false;
     }
 
-   
+
 
     if (isValid) {
         const formData = {
@@ -43,9 +43,12 @@ const validateForm = (e) => {
             email: email.value,
             subject: subj.value,
         };
+        let existingData = JSON.parse(localStorage.getItem('contactFormData')) || [];
+
+        existingData.push(formData);
 
         // Store it in localStorage
-        localStorage.setItem('contactFormData', JSON.stringify(formData));
+        localStorage.setItem('contactFormData', JSON.stringify(existingData));
 
         // Optional: show a message or clear the form
         alert("Form submitted successfully and saved locally!");

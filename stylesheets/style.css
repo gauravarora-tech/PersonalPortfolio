@@ -27,13 +27,22 @@ ul {
     --main-color: #8a2be2;
     --body-color: #111111;
     --grey: #252525;
+    --text-color: #ffffff;
+}
+
+body.light-mode {
+    --body-color: #ffffff;
+    /* --grey: #f0f0f0; */
+    --text-color: #504e4e;
 }
 
 body {
     background-color: var(--body-color);
+    color: var(--text-color);
     overflow: hidden;
     position: relative;
     font-family: "Open Sans", system-ui;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* HEADINGS */
@@ -45,7 +54,7 @@ h5,
 h6 {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    /* font-weight: 100; */
+    color: var(--text-color);
 }
 
 /* VERTICAL NavBar */
@@ -62,7 +71,6 @@ h6 {
     font-size: 0.8rem;
     margin-top: 4px;
 }
-
 
 /* body-bg-box strt */
 .bg-box {
@@ -97,6 +105,7 @@ h6 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color: var(--text-color);
 }
 
 .main-sec-wrap .main-sec-content .description p {
@@ -104,6 +113,7 @@ h6 {
     line-height: 2rem;
     margin-top: 1rem;
     font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 .main-sec-wrap .main-sec-content h1 span#main-color {
@@ -114,6 +124,7 @@ h6 {
     font-weight: bold;
     font-size: 3.5rem;
     text-transform: uppercase;
+    color: var(--text-color);
 }
 
 .main-sec-btn {
@@ -122,25 +133,23 @@ h6 {
     margin-top: 2rem;
 }
 
-
 .main-sec-btn a {
     position: relative;
     width: 14rem;
-    border-color: #8a2be2;
+    border-color: var(--main-color);
     border-radius: 2rem;
     font-weight: bold;
     padding: 12px 0px;
     font-family: "Poppins", sans-serif;
+    color: var(--text-color);
 }
 
 .main-sec-btn a .arrow {
-    /* z-index: -1; */
     position: absolute;
-    border: 1px solid #8a2be2;
+    border: 1px solid var(--main-color);
     border-radius: 50%;
-    background-color: #8a2be2;
-    color: #fff !important;
-    /* padding: 15px; */
+    background-color: var(--main-color);
+    color: var(--text-color) !important;
     top: 0;
     bottom: 0;
     right: 0;
@@ -152,18 +161,16 @@ h6 {
     top: 50%;
     transform: translateY(-65%);
     position: relative;
+    color: var(--text-color);
 }
 
 a.btn:hover,
 a.btn:active {
     background-color: var(--main-color) !important;
     border-color: var(--main-color) !important;
-    /* z-index: 1; */
-
 }
 
 a.btn:hover span i {
-    /* position: relative; */
     z-index: 1;
 }
 
@@ -176,6 +183,7 @@ a.btn:hover span i {
     justify-content: flex-end;
     align-items: center;
     font-weight: 400;
+    color: var(--text-color);
 }
 
 .main-menu li {
@@ -185,7 +193,7 @@ a.btn:hover span i {
 .main-menu li .nav-items .icon {
     height: 50px;
     width: 50px;
-    background-color: #8a2be2;
+    background-color: var(--main-color);
     display: block;
     border-radius: 50%;
     line-height: 50px;
@@ -193,12 +201,12 @@ a.btn:hover span i {
 }
 
 .main-menu li .nav-items .icon i {
-    color: #fff;
+    color: var(--text-color);
 }
 
 .main-menu .nav-items .items {
-    color: #fff;
-    background-color: #8a2be2;
+    color: var(--text-color);
+    background-color: var(--main-color);
     padding: 13px 26px;
     display: block;
     border-top-left-radius: 25px;
@@ -215,10 +223,21 @@ a.btn:hover span i {
     opacity: 1;
 }
 
-/* Main-section-end */
+/* Theme Toggle Button */
+button#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    /* background-color: var(--grey); */
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
 
 /* RESPONSIVE SECTION */
-
 @media (min-width:280px) and (max-width:576px) {
     .bg-box {
         display: none;

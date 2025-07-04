@@ -1,7 +1,4 @@
 let navHtml = `<nav class="nav-bar vertical-nav">
-                    <!-- <div class="open-phone-btn">
-                                <ion-icon name="close-outline" class="close-btn nav-btn"></ion-icon>
-                            </div> -->
                     <ul class="main-menu">
                         <li><a href="index.html" class="nav-items active"><span
                                     class="items order-lg-1 order-2">HOME</span><span class="icon order-lg-2 order-1"><i
