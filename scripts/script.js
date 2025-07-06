@@ -11,6 +11,8 @@ openBtn.addEventListener('click', () => {
 // })
 
 
+
+// Theme toggle functionality
 const toggleButton = document.getElementById('theme-toggle');
 console.log(toggleButton);
 

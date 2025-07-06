@@ -28,12 +28,14 @@ ul {
     --body-color: #111111;
     --grey: #252525;
     --text-color: #ffffff;
+    --icon-color:#ffffff;
 }
 
 body.light-mode {
     --body-color: #ffffff;
     /* --grey: #f0f0f0; */
     --text-color: #504e4e;
+    --main-color:#504e4e;
 }
 
 body {
@@ -161,7 +163,7 @@ h6 {
     top: 50%;
     transform: translateY(-65%);
     position: relative;
-    color: var(--text-color);
+    color: var(--icon-color);
 }
 
 a.btn:hover,
@@ -201,11 +203,11 @@ a.btn:hover span i {
 }
 
 .main-menu li .nav-items .icon i {
-    color: var(--text-color);
+    color: var(--icon-color);
 }
 
 .main-menu .nav-items .items {
-    color: var(--text-color);
+    color: var(--icon-color);
     background-color: var(--main-color);
     padding: 13px 26px;
     display: block;

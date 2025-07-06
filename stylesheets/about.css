@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -22,16 +20,27 @@ li {
 :root {
     --main-color: #8a2be2;
     --body-color: #111111;
+    --grey: #252525;
+    --text-color: #ffffff;
+    --icon-color: #ffffff;
+    --subtext-color: #afafaf;
 }
 
 body {
     background-color: var(--body-color);
     position: relative;
     font-family: "Open Sans", system-ui;
-    /* overflow: hidden; */
 }
 
-/* HEADINGS */
+body.light-mode {
+    --body-color: #ffffff;
+    --grey: #f0f0f0;
+    --text-color: #504e4e;
+    --main-color: #504e4e;
+    /* --icon-color: #504e4e; */
+    --subtext-color: #777777;
+}
+
 h1,
 h2,
 h3,
@@ -40,10 +49,21 @@ h5,
 h6 {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    /* font-weight: 100; */
 }
 
-/* SECTION-TITLE STRT */
+button#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 1;
+}
+
 .title {
     position: relative;
 }
@@ -54,7 +74,7 @@ h6 {
     letter-spacing: .6rem;
     font-weight: 900;
     position: absolute;
-    color: #2a2a2a;
+    color: var(--grey);
     left: 50%;
     transform: translateX(-50%);
     font-family: "poppins", sans-serif;
@@ -66,15 +86,13 @@ h6 {
     font-size: 3.5rem;
     font-weight: 900;
     opacity: .8;
+    color: var(--text-color);
 }
 
 .title .main-head .title-color {
     color: var(--main-color);
 }
 
-/* SECTION-TITLE END */
-
-/* INFOS SECTION STRT */
 .info-sec-wrap {
     display: flex;
 }
@@ -84,26 +102,25 @@ h6 {
 }
 
 .info-sec .personal-info .head-color {
-    color: #afafaf;
+    color: var(--subtext-color);
     font-weight: 500;
     padding: .5rem 0rem;
 }
 
 .info-sec .personal-info .head-color span {
-    color: #fff;
+    color: var(--text-color);
 }
 
 .main-sec-btn {
     width: 100%;
-    /* padding-left: 3.5rem; */
     margin-top: 2rem;
 }
-
 
 .main-sec-btn a {
     position: relative;
     width: 14rem;
     border-color: var(--main-color);
+    color: var(--text-color);
     border-radius: 2rem;
     font-weight: bold;
     padding: 12px 0px;
@@ -111,37 +128,32 @@ h6 {
 }
 
 .main-sec-btn a .arrow {
-    /* z-index: -1; */
     position: absolute;
     border: 1px solid var(--main-color);
     border-radius: 50%;
     background-color: var(--main-color);
-    color: #fff !important;
-    /* padding: 15px; */
+    /* color: var(--icon-color); */
     top: 0;
     bottom: 0;
     right: 0;
     height: auto;
     width: 45px;
-
 }
 
 .main-sec-btn a .arrow i {
     top: 50%;
     transform: translateY(-65%);
     position: relative;
+    color: var(--icon-color);
 }
 
 a.btn:hover,
 a.btn:active {
     background-color: var(--main-color) !important;
     border-color: var(--main-color) !important;
-    /* z-index: 1; */
-
 }
 
 a.btn:hover span i {
-    /* position: relative; */
     z-index: 1;
 }
 
@@ -150,14 +162,13 @@ a.btn:hover span i {
 }
 
 .aboutExperiances {
-    border: 2px solid #2a2a2a;
-    /* width: 50%; */
+    border: 2px solid var(--grey);
     padding: 25px 25px;
 }
 
 .aboutExperiances .num {
     font-size: 3rem;
-    color: #8a2be2;
+    color: var(--main-color);
     font-weight: 700;
 }
 
@@ -165,12 +176,13 @@ a.btn:hover span i {
     position: relative;
     padding-left: 40px;
     font-weight: bold;
+    color: var(--text-color);
 }
 
 .aboutExperiances .content::before {
     content: "";
     position: absolute;
-    border: 1px solid #afafaf;
+    border: 1px solid var(--subtext-color);
     left: 16px;
     top: 25%;
     transform: translateX(-50%);
@@ -195,7 +207,7 @@ a.btn:hover span i {
 .main-menu li .nav-items .icon {
     height: 50px;
     width: 50px;
-    background-color: #8a2be2;
+    background-color: var(--main-color);
     display: block;
     border-radius: 50%;
     line-height: 50px;
@@ -203,12 +215,12 @@ a.btn:hover span i {
 }
 
 .main-menu li .nav-items .icon i {
-    color: #fff;
+    color: var(--icon-color);
 }
 
 .main-menu .nav-items .items {
-    color: #fff;
-    background-color: #8a2be2;
+    color: var(--icon-color);
+    background-color: var(--main-color);
     padding: 13px 26px;
     display: block;
     border-top-left-radius: 25px;
@@ -230,26 +242,23 @@ a.btn:hover span i {
     right: 2rem;
 }
 
-/* INFOS SECTION END */
-
-/* MY SKILLS SECTION STRT */
 .common-heading h1 {
     font-size: 2rem;
     font-weight: bold;
     position: relative;
     padding: 4rem 0px;
+    color: var(--text-color);
 }
 
 .common-heading::before {
     content: "";
     position: absolute;
-    border-top: 1px solid #212529;
+    border-top: 1px solid var(--grey);
     width: 40%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* MY SKILLS SECTION END */
 .experiance-sec {
     margin-top: 3rem;
 }
@@ -259,13 +268,13 @@ a.btn:hover span i {
 }
 
 .experiance-sec .exp-img i {
-    /* position: relative; */
-    background-color: #8a2be2;
+    background-color: var(--main-color);
     width: 35px;
     height: 35px;
     text-align: center;
     border-radius: 50%;
     line-height: 35px;
+    color: var(--icon-color);
 }
 
 .experiance-sec .exp-img::before {
@@ -274,7 +283,7 @@ a.btn:hover span i {
     width: .5px;
     border-radius: 10px;
     height: 90px;
-    background-color: #3c3c3c;
+    background-color: var(--grey);
     left: 50%;
     transform: translateX(-50%);
     top: 34px;
@@ -283,15 +292,20 @@ a.btn:hover span i {
 
 .exp-content .year-info {
     font-weight: 600;
-    background-color: #242323;
+    background-color: var(--grey);
     width: fit-content;
     border-radius: 15px;
     padding: 3px 10px;
     font-size: small;
+    color: var(--text-color);
+}
+
+.exp-content .about-work{
+    color: var(--subtext-color);
 }
 
 .exp-content .work-domain span {
-    color: #b5b4b4;
+    color: var(--subtext-color);
     font-size: 1rem;
     font-weight: bold;
 }
@@ -302,6 +316,7 @@ a.btn:hover span i {
 
 .edu-wrap .work-domain {
     font-size: 1.3rem;
+    color: var(--text-color);
 }
 
 /* RESPONSIVE CODE */

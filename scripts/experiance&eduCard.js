@@ -35,7 +35,7 @@ const cardContainer = document.querySelector("#card-container");
 cardData.forEach(card => {
     const cardElement = `
     <div class="col-12 col-lg-6" >
-    <div class="exp-box text-white d-flex">
+    <div class="exp-box d-flex">
                             <div class="exp-img me-3">
                                 <i class="${card.icon}"></i>
                             </div>
