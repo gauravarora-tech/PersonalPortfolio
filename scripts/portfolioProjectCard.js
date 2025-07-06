@@ -1,7 +1,7 @@
 const projects = [
     {
         imgSrc: '../img/gymproj.jpg',
-        projectSrc: 'https://github.com/gauravarora-tech/fitnessplacegym',
+        projectSrc: 'https://fitnessplace.vercel.app/',
         projectName: 'Fitness Place Gym',
     },
     {
@@ -11,7 +11,7 @@ const projects = [
     },
     {
         imgSrc: '../img/project-3.jpg',
-        projectSrc: 'https://github.com/gauravarora-tech/fitnessplacegym',
+        projectSrc: 'https://fitnessplace.vercel.app/',
         projectName: 'Fitness Place Gym',
     },
 

@@ -300,7 +300,7 @@ a.btn:hover span i {
     color: var(--text-color);
 }
 
-.exp-content .about-work{
+.exp-content .about-work {
     color: var(--subtext-color);
 }
 
@@ -318,6 +318,63 @@ a.btn:hover span i {
     font-size: 1.3rem;
     color: var(--text-color);
 }
+
+
+/* My skills section */
+.my-skills {
+    margin-top: 7rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.skill-ring {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-ring::before {
+    content: "";
+    position: absolute;
+    width: 87%;
+    height: 87%;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #00c6ff, #0072ff, #8e2de2, #ff6ec4, #00c6ff);
+    animation: spin 3s linear infinite;
+    z-index: 0;
+}
+
+.inner-circle {
+    width: 80px;
+    height: 80px;
+    background-color: var(--body-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-size: 32px;
+    color: var(--main-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* RESPONSIVE CODE */
 
